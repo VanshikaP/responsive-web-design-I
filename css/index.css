@@ -1,3 +1,274 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+body{
+	margin: 0 5%;
+}
+
+header{
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	align-content: space-between;
+}
+/* --- Navigation Bar Styling --- */
+
+.navbar{
+	width: 100%;
+	padding-top: 1%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+.navbar nav{
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+}
+.navbar nav a{
+	color: lightgrey;
+	text-decoration: none;
+}
+.navbar img{
+	width: 15%;
+}
+
+.logo-link img{
+	width: 13.4vw;
+}
+/* --- Ends Navigation Bar Styling --- */
+/* --- Header Styling --- */
+.main-header{
+	margin: 2% 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.main-header div{
+	width: 60%;
+	text-align: center;
+
+}
+.main-header h1{
+	font-size: 70px;
+}
+.main-header button{	
+    font-size: 16px;
+    padding: 1% 5%;
+    border: 1px solid black;
+}
+button:hover{
+	animation: color-change 3s infinite;
+}
+
+@keyframes color-change{
+	from {background-color: black;
+	color: white;}
+	to {background-color: dimgray;
+	color: black;}
+}
+.main-header img{
+	width: 30%;
+}
+/* .services-header-img{
+	width: 100%;	
+	margin: 2% 0;
+
+}
+.services-header{	
+	line-height: 1.2;
+}
+.services-header h1{
+	font-size: 25px;
+} */
+/* --- Ends Header Styling --- */
+/* --- Content Styling --- */
+.content{
+	margin: 3% 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.box-one{
+	display: flex;
+	justify-content: space-between;
+	margin : 2% auto;
+}
+.one{
+	width: 50%;	
+}
+
+.content img{
+	width: 100%;
+}
+.box-two{
+	display: flex;
+	justify-content: space-between;
+	margin : 2% auto;
+}
+.two{
+	width: 30%;
+}
+
+
+
+.three{
+	width: 40%;
+}
+/* #services{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: space-evenly;
+	height: 120vh;
+	line-height: 1.2;
+}
+
+
+
+.services-box{
+	background-color: gainsboro;
+	border: 0.5px solid black;
+	width: 48%;
+	padding: 1%;
+}
+.services-box button{
+	padding: 2% 5%;
+	border-radius: 5px;
+	border: 1px solid darkgray;
+}
+
+/* ------ Stretch Goals ------*/
+/*
+.stretch-content{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 5% 0;
+	margin: 2% 0;
+	height: 70vh;
+}
+.stretch-content h3{
+	text-align: center;
+}
+.stretch-box-1{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 30%;
+	text-align: justify; 
+
+}
+.stretch1{
+	height: 50%;
+}
+.stretch2{
+	height: 50%;
+}
+
+.stretch-box-2{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 30%;
+	text-align: justify;
+}
+.stretch-content img{
+
+	width: 30%;
+} */
+
+/* --- Ends Content Styling --- */
+
+/* --- Bottom Section Styling --- */
+.contact p{
+	margin: 1.5% 0;
+}
+/* 
+.services-info{
+	display: flex;
+	justify-content: space-between;
+	line-height: 1.2;
+
+}
+ul{
+	list-style-type: disc;
+	list-style-position: inside;
+	line-height: 2;
+}
+.services-info-text{
+	width: 48%;
+}
+.services-info-img{
+	width: 48%;
+} */
+/* --- Ends Bottom Section Styling --- */
+
+/* --- Footer Styling --- */
+footer{
+	margin: 5% 0 1% 0;
+	text-align: center;
+} 
+
+/****** Tablet View Styling ******/
+
+@media screen and (max-width: 800px){
+    *{
+        max-width: 100%;
+    }
+    body{
+        width: 80%;
+        margin: auto;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+    }
+    .navbar nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar img{
+        width: 30%;
+        margin-bottom: 5%;
+    }
+    .main-header{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .main-header img{
+        width: 0%;
+    }
+
+    .main-header div{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+/****** Mobile View Styling ******/
 
 
