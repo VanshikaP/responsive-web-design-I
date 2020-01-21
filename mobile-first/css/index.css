@@ -16,9 +16,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-body{
-	margin: 0 5%;
-}
+
 
 
 /* --- Navigation Bar Styling --- */
@@ -58,7 +56,7 @@ body{
 /* --- Ends Navigation Bar Styling --- */
 /* --- Header Styling --- */
 .main-header{
-	margin: 2% 0;
+	margin: 10% 5%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -70,7 +68,7 @@ body{
 
 }
 .main-header h1{
-	font-size: 6rem;
+	font-size: 3em;
 }
 .main-header button{	
     font-size: 16px;
@@ -105,18 +103,18 @@ button:hover{
 /* --- Ends Header Styling --- */
 /* --- Content Styling --- */
 .content{
-	margin: 5% 0;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 0 5%;
 }
 .box-one{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin : 2% auto;
+	margin : 10% 0;
 }
 .one{
 	width: 100%;	
@@ -208,8 +206,11 @@ button:hover{
 /* --- Ends Content Styling --- */
 
 /* --- Bottom Section Styling --- */
+.contact{
+	margin: 7% 5%;
+}
 .contact p{
-	margin-bottom; 5%;
+	margin-bottom: 1.5%;
 }
 /* 
 .services-info{
@@ -244,8 +245,7 @@ footer{
         max-width: 100%;
     }
     body{
-        width: 90%;
-        margin: auto;
+        margin: 0 5%;
     }
     .navbar{
         display: flex;
@@ -259,6 +259,7 @@ footer{
 		flex-direction: row;
 		justify-content: space-between;
 		border-width: 0px;
+		margin: 0;
 		
 	}
 	.navbar nav a{
@@ -270,11 +271,6 @@ footer{
         width: 30%;
         margin-bottom: 3%;
     }
-    .main-header{
-        display: flex;
-        flex-direction: column;
-
-    }
 
     .main-header img{
         width: 0%;
@@ -282,22 +278,35 @@ footer{
 
     .main-header div{
         width: 100%;
-        margin-bottom: 5%;
+        margin: 0;
+	}
+	.main-header h1{
+		font-size: 4em;
+	}
+	.content{
+		margin: 0;
 	}
 	.box-one{
+		margin: 5% 0;
 		flex-direction: row;
 		justify-content: space-between;
 
 	}
 	.one{
 		width: 48%;
+		margin: 0;
 	}
 	.box-two{
+		margin: 5% 0;
 		flex-direction: row;
 		justify-content: space-between;
 	}
 	.two{
 		width: 30%;
+		margin: 0;
+	}
+	.contact{
+		margin: 5% 0;
 	}
 }
 
@@ -339,9 +348,10 @@ footer{
 	.main-header{
 		flex-direction: row;
 		justify-content: space-between;
+		margin: 5% 0;
 	}
 	.main-header div{
-		width: 60%;
+		width: 60%;	
 		height: auto;
 		margin: auto 0;
 	}
@@ -368,12 +378,14 @@ footer{
         display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		margin: 2% 0;
     }
     .two{
-        width: 30%;
+		width: 30%;
+		margin: 0;
     }
     .contact{
-        margin: 5% auto;
+        margin: 2% auto;
     }
 }
 
