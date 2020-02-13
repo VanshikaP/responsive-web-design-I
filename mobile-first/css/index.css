@@ -2,6 +2,8 @@
 * {
 	box-sizing: border-box;
 	max-width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 html, body {
@@ -14,58 +16,59 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-body{
-	margin: 0 5%;
-}
 
-header{
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	align-content: space-between;
-}
+
+
 /* --- Navigation Bar Styling --- */
 
 .navbar{
 	width: 100%;
 	padding-top: 1%;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;	
+	flex-direction: column-reverse;
+	align-items: center;
+		
 }
 
 .navbar nav{
-	width: 70%;
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	align-content: space-around;
+	margin: 5% auto;
+	border-top: 1px solid lightgray;
+	text-align: center;
 }
 .navbar nav a{
-	color: lightgrey;
+	width: 100%;
+	color: dimgray;
+	padding: 2% 0;
 	text-decoration: none;
+	border-bottom: 1px solid lightgray;
 }
 .navbar img{
-	width: 15%;
+	width: 30%;
 }
 
-.logo-link img{
+/* .logo-link img{
 	width: 13.4vw;
-}
+} */
 /* --- Ends Navigation Bar Styling --- */
 /* --- Header Styling --- */
 .main-header{
-	margin: 2% 0;
+	margin: 10% 5%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .main-header div{
-	width: 60%;
+	width: 100%;
 	text-align: center;
 
 }
 .main-header h1{
-	font-size: 5em;
+	font-size: 3em;
 }
 .main-header button{	
     font-size: 16px;
@@ -84,7 +87,7 @@ button:hover{
 	color: black;}
 }
 .main-header img{
-	width: 30%;
+	width: 0%;
 }
 /* .services-header-img{
 	width: 100%;	
@@ -100,20 +103,22 @@ button:hover{
 /* --- Ends Header Styling --- */
 /* --- Content Styling --- */
 .content{
-	margin: 3% 0;
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 0 5%;
 }
 .box-one{
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	margin : 2% auto;
+	flex-direction: column;
+	margin : 10% 0;
 }
 .one{
-	width: 50%;	
+	width: 100%;	
+	margin-bottom: 5%;
 }
 
 .content img{
@@ -121,18 +126,19 @@ button:hover{
 }
 .box-two{
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	margin : 2% auto;
 }
 .two{
-	width: 30%;
+	width: 100%;
+	margin-bottom: 5%;
 }
 
 
-
+/* 
 .three{
 	width: 40%;
-}
+} */
 /* #services{
 	display: flex;
 	flex-flow: row wrap;
@@ -200,8 +206,11 @@ button:hover{
 /* --- Ends Content Styling --- */
 
 /* --- Bottom Section Styling --- */
+.contact{
+	margin: 7% 5%;
+}
 .contact p{
-	margin: 1.5% 0;
+	margin-bottom: 1.5%;
 }
 /* 
 .services-info{
@@ -231,13 +240,12 @@ footer{
 
 /****** Tablet View Styling ******/
 
-@media screen and (max-width: 800px){
+@media screen and (min-width: 500px){
     *{
         max-width: 100%;
     }
     body{
-        width: 80%;
-        margin: auto;
+        margin: 0 5%;
     }
     .navbar{
         display: flex;
@@ -247,17 +255,21 @@ footer{
     }
     .navbar nav{
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		border-width: 0px;
+		margin: 0;
+		
+	}
+	.navbar nav a{
+		width: auto;
+		border-width: 0px;
+		padding: 0;
+	}
     .navbar img{
         width: 30%;
-        margin-bottom: 5%;
-    }
-    .main-header{
-        display: flex;
-        flex-direction: column;
-
+        margin-bottom: 3%;
     }
 
     .main-header img{
@@ -266,63 +278,114 @@ footer{
 
     .main-header div{
         width: 100%;
-        margin-bottom: 5%;
-    }
+        margin: 0;
+	}
+	.main-header h1{
+		font-size: 4em;
+	}
+	.content{
+		margin: 0;
+	}
+	.box-one{
+		margin: 5% 0;
+		flex-direction: row;
+		justify-content: space-between;
+
+	}
+	.one{
+		width: 48%;
+		margin: 0;
+	}
+	.box-two{
+		margin: 5% 0;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.two{
+		width: 30%;
+		margin: 0;
+	}
+	.contact{
+		margin: 5% 0;
+	}
 }
 
-/****** Mobile View Styling ******/
+/****** Desktop View Styling ******/
 
-@media screen and (max-width: 500px){
-    body{
-        width: 100%;
+@media screen and (min-width: 800px){
+    *{
         margin: 0;
-        padding: 0;
-    }
+		padding: 0;
+		max-width: 100%;
+	}
+	body{
+		width: 90%;
+		margin: auto 5;
+	}
     .navbar{
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
+		flex-direction: row;
+		width: 100%;
+		margin: 0;
+		justify-content: space-between;
     }
     .navbar nav{
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-top: 1px solid lightgray;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 60%;
+		margin: 0;
+		border-width: 0px;
+		
     }
     .navbar a{
-        border-bottom: 1px solid lightgray;
-        padding: 2%;
+        border-width: 0px;
         text-align: center;
     }
     .navbar img{
-        width: 30%;
+		width: 15%;
+		margin: 0;
+    }
+	.main-header{
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 5% 0;
+	}
+	.main-header div{
+		width: 60%;	
+		height: auto;
+		margin: auto 0;
 	}
 	.main-header h1{
-		font-size: 3em;
+		font-size: 7rem;
 	}
-	.main-header{
-		margin: 15% 0;
+	.main-header img{
+		width: 30%;
 	}
     .content{
-        margin: auto 5%;
-    }
+        margin: auto;
+	}
     .box-one{
         display: flex;
-        flex-direction: column;
-        margin: 10% auto;
+		flex-direction: row;
+		justify-content: space-between;
+        margin: 2% auto;
     }
     .one{
-        width: 100%;
+		width: 48%;
+		margin: 0;
     }
     .box-two{
         display: flex;
-        flex-direction: column;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 2% 0;
     }
     .two{
-        width: 100%;
+		width: 30%;
+		margin: 0;
     }
     .contact{
-        margin: auto 5%;
+        margin: 2% auto;
     }
 }
 
